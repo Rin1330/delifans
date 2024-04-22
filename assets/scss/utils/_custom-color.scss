@@ -1,0 +1,24 @@
+$brand-100: #212739;
+$brand-200: #38415A;
+$brand-300: #A2B2DF;
+$brand-400: #FD6592;
+$gray-100: #1E1E1E;
+$gray-200: #8A8A8B;
+$gray-300: #BDC0C2;
+$gray-400: #FAFAFA;
+$line-color: #DFE4EB;
+
+
+$custom-colors: (
+  'brand-100': $brand-100,
+  'brand-200': $brand-200,
+  'brand-300': $brand-300,
+  'brand-400': $brand-400,
+  'gray-100': $gray-100,
+  'gray-200': $gray-200,
+  'gray-300': $gray-300,
+  'gray-400': $gray-400,
+  'lineColor': $line-color,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
