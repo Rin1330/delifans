@@ -671,6 +671,7 @@ $h6-font-size: $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
+	0: 0,
 	1: $h1-font-size,
 	//48px
 	2: $h2-font-size,
@@ -1253,22 +1254,22 @@ $navbar-brand-font-size: $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) * 0.5 !default;
+$navbar-brand-padding-y: 0; //($nav-link-height - $navbar-brand-height) * 0.5 !default;
 $navbar-brand-margin-end: 1rem !default;
 
 $navbar-toggler-padding-y: 0.25rem !default;
-$navbar-toggler-padding-x: 0.75rem !default;
-$navbar-toggler-font-size: $font-size-lg !default;
-$navbar-toggler-border-radius: $btn-border-radius !default;
-$navbar-toggler-focus-width: $btn-focus-width !default;
-$navbar-toggler-transition: box-shadow 0.15s ease-in-out !default;
+$navbar-toggler-padding-x: 0.25rem !default;
+$navbar-toggler-font-size: 1.25rem; //$font-size-lg !default;
+$navbar-toggler-border-radius: null; //$btn-border-radius !default;
+$navbar-toggler-focus-width: 0; //$btn-focus-width !default;
+$navbar-toggler-transition: null; //box-shadow 0.15s ease-in-out !default;
 
-$navbar-light-color: rgba(var(--#{$prefix}emphasis-color-rgb), 0.65) !default;
-$navbar-light-hover-color: rgba(var(--#{$prefix}emphasis-color-rgb), 0.8) !default;
-$navbar-light-active-color: rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
+$navbar-light-color: #ffffff; //rgba(var(--#{$prefix}emphasis-color-rgb), 0.65) !default;
+$navbar-light-hover-color: #a2b2df; //rgba(var(--#{$prefix}emphasis-color-rgb), 0.8) !default;
+$navbar-light-active-color: #a2b2df; //rgba(var(--#{$prefix}emphasis-color-rgb), 1) !default;
 $navbar-light-disabled-color: rgba(var(--#{$prefix}emphasis-color-rgb), 0.3) !default;
 $navbar-light-icon-color: rgba($body-color, 0.75) !default;
-$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 -960 960 960'><path fill='#ffffff'  d='M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), 0.15) !default;
 $navbar-light-brand-color: $navbar-light-active-color !default;
 $navbar-light-brand-hover-color: $navbar-light-active-color !default;
@@ -1776,7 +1777,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 $offcanvas-padding-y: $modal-inner-padding !default;
 $offcanvas-padding-x: $modal-inner-padding !default;
 $offcanvas-horizontal-width: 400px !default;
-$offcanvas-vertical-height: 30vh !default;
+$offcanvas-vertical-height: 100vh !default;
 $offcanvas-transition-duration: 0.3s !default;
 $offcanvas-border-color: $modal-content-border-color !default;
 $offcanvas-border-width: $modal-content-border-width !default;

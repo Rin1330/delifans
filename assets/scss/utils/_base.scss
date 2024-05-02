@@ -1,13 +1,13 @@
-.header .logo {
-  width: 227px;
-  @include media-breakpoint-down(lg) {
-    width: 130px;
-  }
+.header .navbar-brand img {
+	width: 227px;
+	@include media-breakpoint-down(lg) {
+		width: 130px;
+	}
 }
 
 .footer .logo {
-  width: 195px;
-  @include media-breakpoint-down(lg) {
-    width: 162px;
-  }
+	width: 195px;
+	@include media-breakpoint-down(lg) {
+		width: 162px;
+	}
 }

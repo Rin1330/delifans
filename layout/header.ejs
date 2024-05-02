@@ -1,1 +1,64 @@
-<header class="header"></header>
+<header class="header">
+	<nav class="navbar navbar-expand-lg bg-brand-100">
+		<div class="container">
+			<a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt="" /></a>
+
+			<div
+				class="offcanvas offcanvas-top bg-brand-100"
+				data-bs-backdrop="static"
+				tabindex="-1"
+				id="staticBackdrop"
+				aria-labelledby="staticBackdropLabel"
+			>
+				<div class="offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<div>
+						<form class="d-flex" role="search">
+							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+						</form>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link p-5 lh-sm active" href="#">貨品總覽</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link p-5 lh-sm" href="#">最新消息</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link p-5 lh-sm" href="#">關於我們</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link p-5 lh-sm" href="#">條款及細則</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link p-5 lh-sm" href="#">常見問題</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="d-flex">
+				<div class="">
+					<button class="btn fs-0 p-2 ms-2" type="button">
+						<span class="material-symbols-outlined text-light">shopping_cart</span>
+					</button>
+					<button class="btn fs-0 p-2 ms-2" type="button">
+						<span class="material-symbols-outlined text-light">account_circle</span>
+					</button>
+				</div>
+				<button
+					class="navbar-toggler border-0"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#staticBackdrop"
+					aria-controls="staticBackdrop"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>
