@@ -1,5 +1,7 @@
 @import "./helpers/font";
-
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 // Custom.scss
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
@@ -58,3 +60,4 @@
 
 // 8. Add additional custom code here
 @import "./utils/base";
+@import "./helpers/plugin";
