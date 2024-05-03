@@ -1,63 +1,78 @@
 <header class="header">
-	<nav class="navbar navbar-expand-lg bg-brand-100">
+	<nav class="navbar navbar-expand-lg bg-brand-100 pt-2 pt-lg-5">
 		<div class="container">
-			<a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt="" /></a>
-
-			<div
-				class="offcanvas offcanvas-top bg-brand-100"
-				data-bs-backdrop="static"
-				tabindex="-1"
-				id="staticBackdrop"
-				aria-labelledby="staticBackdropLabel"
-			>
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-				<div class="offcanvas-body">
-					<div>
-						<form class="d-flex" role="search">
-							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-						</form>
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link p-5 lh-sm active" href="#">貨品總覽</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link p-5 lh-sm" href="#">最新消息</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link p-5 lh-sm" href="#">關於我們</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link p-5 lh-sm" href="#">條款及細則</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link p-5 lh-sm" href="#">常見問題</a>
-							</li>
-						</ul>
+			<div class="d-flex align-items-start justify-content-between w-100">
+				<a class="navbar-brand" href="#"><img src="../assets/images/logo.png" alt="Logo" /></a>
+				<div class="flex-grow-1">
+					<div
+						class="offcanvas offcanvas-top bg-brand-100"
+						data-bs-backdrop="static"
+						tabindex="-1"
+						id="staticBackdrop"
+						aria-labelledby="staticBackdropLabel"
+					>
+						<div class="offcanvas-header py-2">
+							<button type="button" class="btn fs-0 p-2 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+								<span class="material-symbols-outlined">close</span>
+							</button>
+						</div>
+						<div class="offcanvas-body pt-1 pt-lg-0 flex-wrap justify-content-center mx-auto w-100">
+							<form class="d-flex position-relative w-100" role="search">
+								<input
+									class="form-control rounded-6 text-white"
+									type="search"
+									placeholder="Search"
+									aria-label="Search"
+									style="padding-left: 3.5rem"
+								/>
+								<span
+									class="material-symbols-outlined text-brand-300 position-absolute top-50 translate-middle-y fs-5"
+									style="left: 1.5rem"
+									>search</span
+								>
+							</form>
+							<ul class="navbar-nav mt-5 flex-grow-1 justify-content-around">
+								<li class="nav-item">
+									<a class="nav-link p-5 lh-sm text-center" href="#">貨品總覽</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link p-5 lh-sm text-center" href="#">最新消息</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link p-5 lh-sm text-center" href="#">關於我們</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link p-5 lh-sm text-center" href="#">條款及細則</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link p-5 lh-sm text-center" href="#">常見問題</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="d-flex">
-				<div class="">
-					<button class="btn fs-0 p-2 ms-2" type="button">
-						<span class="material-symbols-outlined text-light">shopping_cart</span>
-					</button>
-					<button class="btn fs-0 p-2 ms-2" type="button">
-						<span class="material-symbols-outlined text-light">account_circle</span>
+				<div class="d-flex">
+					<div class="d-flex flex-lg-row-reverse">
+						<button class="btn fs-0 p-2 mx-1" type="button">
+							<span class="material-symbols-outlined">account_circle</span>
+						</button>
+						<button class="btn fs-0 p-2 mx-1" type="button">
+							<span class="material-symbols-outlined">shopping_cart</span>
+						</button>
+					</div>
+					<button
+						class="btn fs-0 p-2 ms-1 d-block d-lg-none"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#staticBackdrop"
+						aria-controls="staticBackdrop"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<!-- <span class="navbar-toggler-icon"></span> -->
+						<span class="material-symbols-outlined"> menu </span>
 					</button>
 				</div>
-				<button
-					class="navbar-toggler border-0"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#staticBackdrop"
-					aria-controls="staticBackdrop"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
 			</div>
 		</div>
 	</nav>

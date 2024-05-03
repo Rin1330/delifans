@@ -1,7 +1,15 @@
-.header .navbar-brand img {
-	width: 227px;
-	@include media-breakpoint-down(lg) {
-		width: 130px;
+.header {
+	form {
+		max-width: 636px;
+		@include media-breakpoint-down(lg) {
+			max-width: 100%;
+		}
+	}
+	.navbar-brand img {
+		width: 227px;
+		@include media-breakpoint-down(lg) {
+			width: 130px;
+		}
 	}
 }
 
@@ -11,3 +19,18 @@
 		width: 162px;
 	}
 }
+
+.btn {
+	span {
+		color: #ffffff;
+	}
+	&:is(:hover, :focus) {
+		span {
+			color: $brand-300;
+		}
+	}
+}
+
+// .input {
+//   border-radius: ;
+// }
