@@ -434,7 +434,6 @@ $spacers: (
 	15: $spacer * 4.5,
 	//72
 	16: $spacer * 5,
-
 	//80
 ) !default;
 // scss-docs-end spacer-variables-maps
@@ -448,6 +447,11 @@ $position-values: (
 	0: 0,
 	50: 50%,
 	100: 100%,
+	n22: -22px,
+	16px: 1rem,
+	40px: 40px,
+	80px: 80px,
+	120px: 120px,
 ) !default;
 // scss-docs-end position-map
 
@@ -675,7 +679,7 @@ $h6-font-size: $font-size-base !default;
 $font-sizes: (
 	0: 0,
 	1: $h1-font-size,
-	//48px
+	//40px
 	2: $h2-font-size,
 	//32px
 	3: $h3-font-size,
