@@ -1,3 +1,17 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+@for $i from 1 through 5 {
+	.line-clamp-#{$i} {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $i;
+		overflow: hidden;
+	}
+}
+
 .header {
 	form {
 		max-width: 636px;
@@ -52,4 +66,73 @@
 			color: $brand-300;
 		}
 	}
+}
+
+.moreLink {
+	position: relative;
+	transition: color 0.25s ease 0s;
+	&:before {
+		content: ">";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $brand-200;
+		transition: color 0.25s ease 0s;
+	}
+	&:hover:before {
+		color: $brand-300;
+	}
+}
+
+// section style
+
+#aim {
+	.aim-icon {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 48px 48px;
+		@include media-breakpoint-down(lg) {
+			background-size: 40px 40px;
+		}
+	}
+	.col {
+		&:nth-child(1) .aim-icon {
+			background-image: url("/assets/images/aim-star.svg");
+		}
+		&:nth-child(2) .aim-icon {
+			background-image: url("/assets/images/aim-safe.svg");
+		}
+		&:nth-child(3) .aim-icon {
+			background-image: url("/assets/images/aim-money.svg");
+		}
+		&:nth-child(4) .aim-icon {
+			background-image: url("/assets/images/aim-heart.svg");
+		}
+		& > div {
+			transition: all 0.25s ease 0s;
+		}
+		&:is(:hover, :focus) > div {
+			box-shadow: 0 0 15px 1px rgba(85, 85, 85, 0.2);
+		}
+	}
+}
+
+.product-item {
+	// transition: all 0.25s ease 0s;
+	.product-imgBlk {
+		padding-top: 58.823%;
+	}
+	img {
+		transition: all 0.25s ease 0s;
+	}
+	&:is(:hover, :focus) {
+		img {
+			transform: translate(-50%, -50%) scale(1.15) !important;
+		}
+	}
+}
+
+.swiper-grid-column > .swiper-wrapper {
+	flex-direction: unset !important;
 }

@@ -427,8 +427,8 @@ $spacers: (
 	//40
 	12: $spacer * 3,
 	//48
-	13: $spacer * 3.75,
-	//60
+	13: $spacer * 3.5,
+	//56
 	14: $spacer * 4,
 	//64
 	15: $spacer * 4.5,
@@ -444,14 +444,54 @@ $spacers: (
 
 // scss-docs-start position-map
 $position-values: (
+	inherit: inherit,
 	0: 0,
 	50: 50%,
 	100: 100%,
 	n22: -22px,
-	16px: 1rem,
-	40px: 40px,
-	80px: 80px,
-	120px: 120px,
+	1: $spacer * 0.25,
+	//4
+	2: $spacer * 0.5,
+	//8
+	3: $spacer * 0.75,
+	//12
+	4: $spacer * 0.875,
+	//14
+	5: $spacer,
+	6: $spacer * 1.125,
+	//18
+	7: $spacer * 1.25,
+	//20
+	8: $spacer * 1.5,
+	//24
+	9: $spacer * 2,
+	//32
+	10: $spacer * 2.25,
+	//36
+	11: $spacer * 2.5,
+	//40
+	12: $spacer * 3,
+	//48
+	13: $spacer * 3.5,
+	//56
+	14: $spacer * 4,
+	//64
+	15: $spacer * 4.5,
+	//72
+	16: $spacer * 5,
+	//80
+	17: $spacer * 5.5,
+	//80
+	18: $spacer * 6,
+	//96
+	19: $spacer * 6.5,
+	//104
+	20: $spacer * 7,
+	//112
+	21: $spacer * 7.5,
+	//120
+	22: $spacer * 8,
+	//128
 ) !default;
 // scss-docs-end position-map
 
@@ -460,7 +500,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align: null !default;
-$body-color: $gray-900 !default;
+$body-color: #1e1e1e; //$gray-900 !default;
 $body-bg: $white !default;
 
 $body-secondary-color: rgba($body-color, 0.75) !default;
