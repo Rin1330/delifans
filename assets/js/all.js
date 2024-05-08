@@ -15,7 +15,7 @@ if (!!document.querySelector("#home-banner")) {
 		autoplay: {
 			delay: 100000,
 		},
-		speed: 2000,
+		speed: 1000,
 		pagination: {
 			el: "#home-banner .swiper-pagination",
 			clickable: true,
@@ -52,7 +52,7 @@ if (!!document.querySelector("#new-item")) {
 				},
 			},
 		},
-		speed: 2000,
+		speed: 1000,
 		pagination: {
 			el: "#new-item .swiper-pagination",
 			clickable: true,
@@ -89,7 +89,7 @@ if (!!document.querySelector("#discount-item")) {
 				},
 			},
 		},
-		speed: 2000,
+		speed: 1000,
 		pagination: {
 			el: "#discount-item .swiper-pagination",
 			clickable: true,
@@ -106,27 +106,11 @@ if (!!document.querySelector("#discount-item")) {
 
 if (!!document.querySelector("#popular-item")) {
 	const section = new Swiper("#popular-item .swiper", {
-		modules: [Navigation, Pagination, Grid],
+		modules: [Navigation, Pagination],
 		loop: false,
-		slidesPerView: 2,
-		slidesPerColumn: 2,
-		spaceBetween: 12,
-		grid: {
-			fill: "row",
-			rows: 2,
-		},
-		breakpoints: {
-			992: {
-				//当屏幕宽度大于等于1280
-				slidesPerView: 2,
-				spaceBetween: 24,
-				grid: {
-					fill: "row",
-					rows: 2,
-				},
-			},
-		},
-		speed: 2000,
+		slidesPerView: 1,
+		spaceBetween: 10,
+		speed: 1000,
 		pagination: {
 			el: "#popular-item .swiper-pagination",
 			clickable: true,
@@ -137,6 +121,9 @@ if (!!document.querySelector("#popular-item")) {
 		navigation: {
 			nextEl: "#popular-item .swiper-button-next",
 			prevEl: "#popular-item .swiper-button-prev",
+		},
+		on: {
+			init: () => {},
 		},
 	});
 }
