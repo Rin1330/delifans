@@ -1,8 +1,9 @@
 @import "./helpers/font";
 @import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-@import "swiper/css/grid";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+@import "swiper/scss/grid";
+@import "swiper/scss/effect-fade";
 // Custom.scss
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)

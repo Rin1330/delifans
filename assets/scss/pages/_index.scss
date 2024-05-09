@@ -94,19 +94,44 @@
 			transform: translate(-50%, -50%) scale(1.15) !important;
 		}
 	}
-	.rank {
-		width: 3.5rem;
-		height: 3.5rem;
-		background-image: url("/assets/images/rank.svg");
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-size: cover;
-	}
+}
+
+.rank {
+	width: 3.5rem;
+	height: 3.5rem;
+	background-image: url("/assets/images/rank.svg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 // #popular-item
 .popular-item {
 	.swiper-slide > .row > .col:nth-child(1) {
 		display: none;
+	}
+
+	.dynamic-item {
+		opacity: 0;
+		transform: translateX(-20px);
+		transition:
+			transform 0.5s ease 0s,
+			opacity 0.3s ease 0s;
+		&.change {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		.product-item:is(:hover, :focus) {
+			img {
+				transform: translate(0, 0) scale(1.15) !important;
+			}
+			.product-text {
+				background-color: rgba($color: #ffffff, $alpha: 0.4);
+			}
+		}
+		.product-text {
+			transition: all 0.25s ease 0s;
+			background-color: rgba($color: #000000, $alpha: 0.4);
+		}
 	}
 }

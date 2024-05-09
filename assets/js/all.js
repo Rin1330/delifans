@@ -1,6 +1,6 @@
 import * as bootstrap from "bootstrap";
 import Swiper from "swiper";
-import { Navigation, Pagination, Autoplay, Grid } from "swiper/modules";
+import { Navigation, Pagination, Autoplay, Grid, EffectFade } from "swiper/modules";
 
 if (!!document.querySelector("#home-banner")) {
 	const homeBanner = new Swiper("#home-banner", {
@@ -106,11 +106,18 @@ if (!!document.querySelector("#discount-item")) {
 
 if (!!document.querySelector("#popular-item")) {
 	const section = new Swiper("#popular-item .swiper", {
-		modules: [Navigation, Pagination],
-		loop: false,
+		modules: [Navigation, Pagination, Autoplay, EffectFade],
+		loop: true,
 		slidesPerView: 1,
 		spaceBetween: 10,
-		speed: 1000,
+		speed: 1500,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true,
+		},
+		autoplay: {
+			delay: 10000,
+		},
 		pagination: {
 			el: "#popular-item .swiper-pagination",
 			clickable: true,
@@ -123,7 +130,49 @@ if (!!document.querySelector("#popular-item")) {
 			prevEl: "#popular-item .swiper-button-prev",
 		},
 		on: {
-			init: () => {},
+			init: () => {
+				console.log("init");
+				document.querySelector("#dynamic-item").innerHTML = "";
+				renderDynamic();
+				document.querySelector("#dynamic-item").classList.add("change");
+			},
+			slideChange: () => {
+				console.log("change");
+				document.querySelector("#dynamic-item").classList.remove("change");
+				setTimeout(() => {
+					document.querySelector("#dynamic-item").innerHTML = "";
+					renderDynamic();
+					document.querySelector("#dynamic-item").classList.add("change");
+				}, 300);
+			},
 		},
 	});
+}
+
+function renderDynamic() {
+	const clone = document.querySelector("#popular-item .swiper-slide.swiper-slide-active .row").firstElementChild;
+
+	clone.classList.add("h-100");
+	clone.children[0].setAttribute(
+		"class",
+		"product-item position-relative d-block h-100 text-gray-100 rounded-4 overflow-hidden"
+	);
+	clone.children[0].children[1].setAttribute("class", "d-block h-100");
+	clone.children[0].children[1].children[0].setAttribute("class", "h-100 w-100 object-fit-cover");
+	clone.children[0].children[2].setAttribute(
+		"class",
+		"product-text position-absolute d-block w-100 start-0 bottom-0 px-3 px-lg-8 py-5 py-lg-9"
+	);
+
+	clone.children[0].children[2].children[0].setAttribute(
+		"class",
+		"fs-6 fs-lg-3 lh-1_2 text-white mb-2 mb-lg-0 line-clamp-1"
+	);
+
+	clone.children[0].children[2].children[1].children[0].setAttribute(
+		"class",
+		"fs-5 fs-lg-2 text-brand-400 fw-semibold lh-1_2 fw-lg-bold me-lg-2 w-100 w-lg-auto"
+	);
+
+	document.querySelector("#dynamic-item").appendChild(clone.cloneNode(true));
 }
